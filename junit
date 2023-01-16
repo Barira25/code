@@ -23,8 +23,7 @@ TEST CASE: COUNTA1:
 package Junittesting;
 import static org.junit.jupiter.api.Assertions.*;
 import org.junit.jupiter.api.Test;
-class countA1 {
-	@Test
+
 	void test() {
 		Junittesting obj=new Junittesting();
 		int output=obj.countA("taha,alishba,ahmed");
