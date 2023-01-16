@@ -1,0 +1,41 @@
+CLASS JUNITTESTING:
+package Junittesting;
+public class Junittesting {
+public int square (int x) {
+		return x*x;}
+	public int countA(String word){
+		int count = 0; 
+		for (int i=0; i <word.length();i++){
+			if(word.charAt(i)=='a' || word.charAt(i)=='A'){
+				count++;}		}
+		return count;	}}
+TEST CASE: SQUARETEST:
+package Junittesting;
+import static org.junit.jupiter.api.Assertions.*;
+import org.junit.jupiter.api.Test;
+class squaretest {
+	@Test
+	void test() {
+		Junittesting obj=new Junittesting();
+		int output=obj.square(5);
+		assertEquals(25, output);	}	} 
+TEST CASE: COUNTA1:
+package Junittesting;
+import static org.junit.jupiter.api.Assertions.*;
+import org.junit.jupiter.api.Test;
+class countA1 {
+	@Test
+	void test() {
+		Junittesting obj=new Junittesting();
+		int output=obj.countA("taha,alishba,ahmed");
+		assertEquals(5,output);}}
+ 
+TEST SUITE: ALLTESTS:
+package Junittesting;
+import org.junit.runner.RunWith;
+import org.junit.runners.Suite;
+import org.junit.runners.Suite.SuiteClasses;
+@RunWith(Suite.class)
+@SuiteClasses({})
+public class AllTests {}
+
